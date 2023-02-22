@@ -1,3 +1,25 @@
 * {
     border: solid red 1px;
 }
+
+.content-container{
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+.sidebar > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.drawing-container {
+    flex: 4;
+}
+
+.drawing-pad {
+    margin: 5px;
+}
+
