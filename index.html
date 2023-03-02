@@ -5,23 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
     <div class="content-container">
-        <div class="sidebar">
-            <ul>
-                <li>size</li>
-                <li>color</li>
-                <li>eraser</li>
-                <li>clear</li>
-            </ul>
-        </div>
+        <ul class="sidebar">
+            <li>size</li>
+            <li>color</li>
+            <li>eraser</li>
+            <li>clear</li>
+            <li id="slider-container">
+                <h5 style="text-align: center;">1 * 1</h5>
+                <input id="sizeSlider" type="range" value="16" min="1" max="64"> 
+            </li>
+                
+        </ul>
         <div class="drawing-container">
             <div class="drawing-pad">
-                <p>hi</p>
+                <div class="grid">hi 1</div>
+                <div class="grid">hi 2</div>
+                <div class="grid">hi 3</div>
+                <div class="grid">hi 4</div>
+                <div class="grid">hi 5</div>
+                <div class="grid">hi 6</div>
             </div>         
         </div> 
     </div>
