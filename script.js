@@ -30,17 +30,19 @@ function tools(){
     
 }
 
-function addColor(){
+let isDrawing = false;
+function addColor() {
     //draw
     pads.forEach((pad) => {
-        pad.addEventListener("mousedown", () => {
-            pad.style.backgroundColor = currentColor;  
-            console.log("hi")  
-        })
-    })
-
-    document.addEventListener("click",console.log("hi"))
-}
+      pad.addEventListener("mousedown", () => isDrawing = true);
+      pad.addEventListener("mouseup", () => isDrawing = false);
+      pad.addEventListener("mousemove", () => {
+        if (isDrawing === true) {
+          pad.style.backgroundColor = currentColor;
+        }
+      });
+    });
+  }
 
 
 //sidebar numbers
