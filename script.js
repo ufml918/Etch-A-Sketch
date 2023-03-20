@@ -1,5 +1,5 @@
 //drawings!!
-const pads = document.querySelectorAll('.drawing-pad > .grid')
+let pads = document.querySelectorAll('.drawing-pad > .grid')
 let check_eraser = false; //check if erase is on
 let seletColor = "#000000"
 let currentColor = "#000000";
@@ -25,6 +25,7 @@ function tools(){
     //color
     color.addEventListener("input", (e)=>{
         seletColor = e.target.value;
+        currentColor = seletColor;
     })
     
 }
@@ -33,10 +34,14 @@ function addColor(){
     //draw
     pads.forEach((pad) => {
         pad.addEventListener("mousedown", () => {
-            pad.style.backgroundColor = currentColor;    
+            pad.style.backgroundColor = currentColor;  
+            console.log("hi")  
         })
     })
+
+    document.addEventListener("click",console.log("hi"))
 }
+
 
 //sidebar numbers
 let padSize = 1;
@@ -79,7 +84,11 @@ function changePad(){
             rmPad()
         }
     }
+    pads = document.querySelectorAll('.drawing-pad > .grid')
+    tools()
+    addColor()
 }
+
 
 
 sizeBar()
